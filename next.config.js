@@ -1,9 +1,10 @@
-
 /**
  * Module dependencies.
  */
 
-const { WebpackBundleSizeAnalyzerPlugin } = require('webpack-bundle-size-analyzer');
+const {
+  WebpackBundleSizeAnalyzerPlugin,
+} = require("webpack-bundle-size-analyzer");
 
 /**
  * Export next configuration.
@@ -11,22 +12,10 @@ const { WebpackBundleSizeAnalyzerPlugin } = require('webpack-bundle-size-analyze
 
 module.exports = {
   compiler: {
-    styledComponents: true
+    styledComponents: true,
   },
   publicRuntimeConfig: {
-    vercelBaseUrl: process.env.VERCEL_URL
+    vercelBaseUrl: process.env.VERCEL_URL,
   },
   trailingSlash: true,
-  webpack: (config, { webpack }) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['svg-inline-loader?idPrefix&classPrefix']
-    });
-
-    config.plugins.push(
-      new WebpackBundleSizeAnalyzerPlugin('stats.txt')
-    );
-
-    return config;
-  }
 };
