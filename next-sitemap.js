@@ -11,5 +11,5 @@ const vercelBaseUrl = process.env.VERCEL_URL;
 
 module.exports = {
   generateRobotsTxt: true,
-  siteUrl: vercelBaseUrl ? `https://${vercelBaseUrl}` : process.env.NEXT_PUBLIC_BASE_URL
+  siteUrl: process.env.NEXT_PUBLIC_BASE_URL || 'localhost:3000',
 };

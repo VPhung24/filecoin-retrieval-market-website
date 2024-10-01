@@ -13,9 +13,6 @@ module.exports = {
   compiler: {
     styledComponents: true
   },
-  publicRuntimeConfig: {
-    vercelBaseUrl: process.env.VERCEL_URL
-  },
   trailingSlash: true,
   webpack: (config, { webpack }) => {
     config.module.rules.push({

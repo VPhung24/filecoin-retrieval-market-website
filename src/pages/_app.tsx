@@ -13,7 +13,6 @@ import {
 
 import { countlyInit } from 'src/core/utils/countly';
 import { theme } from 'src/styles/theme';
-import CookiesBar from 'src/components/cookies-bar';
 import GlobalStyle from 'src/components/core/global-style';
 import GridDebug from 'src/components/core/debug/grid';
 import Head from 'next/head';
@@ -144,7 +143,6 @@ const PageApp = (props: AppProps): ReactElement => {
 
         <Component {...pageProps} />
 
-        <CookiesBar data={pageProps?.data?.settings} />
       </ThemeProvider>
     </>
   );

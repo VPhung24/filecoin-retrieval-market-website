@@ -63,7 +63,7 @@ class PageDocument extends Document<DocumentInitialProps> {
           />
 
           <link
-            crossOrigin={'true'}
+            crossOrigin={'anonymous'}
             href={'https://fonts.gstatic.com'}
             rel={'preconnect'}
           />
