@@ -11,15 +11,15 @@ import head from 'lodash/head';
  */
 
 Airtable.configure({
-  apiKey: process.env.AIRTABLE_API_KEY,
-  endpointUrl: process.env.AIRTABLE_API_BASE_URL
+  apiKey: process.env.AIRTABLE_API_KEY || '',
+  endpointUrl: process.env.AIRTABLE_API_BASE_URL || 'https://api.airtable.com'
 });
 
 /**
  * Airtable instance.
  */
 
-const airtable = Airtable.base(process.env.AIRTABLE_BASE_ID);
+const airtable = Airtable.base(process.env.AIRTABLE_BASE_ID || '');
 
 /**
  * Get table records.

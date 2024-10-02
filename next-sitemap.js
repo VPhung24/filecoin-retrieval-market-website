@@ -1,10 +1,3 @@
-
-/**
- * Vercel base url.
- */
-
-const vercelBaseUrl = process.env.VERCEL_URL;
-
 /**
  * Export `sitemap` config.
  */

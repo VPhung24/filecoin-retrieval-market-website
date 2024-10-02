@@ -9,7 +9,7 @@ import countly from 'countly-sdk-web';
  * Countly public key.
  */
 
-const countlyPublicKey = process.env.NEXT_PUBLIC_COUNTLY_APP_KEY;
+const countlyPublicKey = process.env.NEXT_PUBLIC_COUNTLY_APP_KEY || '';
 
 /**
  * Config.
